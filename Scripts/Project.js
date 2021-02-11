@@ -20,14 +20,14 @@ nextButton.onclick = nextQuestion()
 
 function nextQuestion(){
     questionIndex++;
-    title.innerHTML(subjects[questionIndex])
-    statement.innerHTML(subjects[questionIndex])
+    title.innerHTML = subjects[questionIndex].title;
+    statement.innerHTML = subjects[questionIndex].statement;
 }
 
 function prevQuestion(){
     questionIndex--;
-    title.innerHTML(subjects[questionIndex])
-    statement.innerHTML(subjects[questionIndex])
+    title.innerHTML = subjects[questionIndex];
+    statement.innerHTML = subjects[questionIndex];
 }
 
 function setAwnserForQuestion(){
