@@ -17,7 +17,7 @@ body {
     margin-top: 10%;
 }
 
-#btn {
+#startBtn {
 	border-style: solid;
 	border-radius: 16px;
 	background: #233fff;
@@ -51,4 +51,13 @@ body {
 
 .icons {
 	margin: 5px;
+}
+
+#prevButton {
+    float: right;
+    margin-right: 8px;;
+}
+
+#nextButton {
+    float: right;
 }
