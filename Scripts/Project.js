@@ -1,5 +1,5 @@
-var questionIndex = 0;
-var answerOnQuestion = [{question_index: 3, awnser: "pro"}, {question_index: 2, awnser: "pro"}, {question_index: 1, awnser: "pro"}];
+var currentQuestionIndex = 0;
+var answerOnQuestion = [{question_index: 3, awnser: "pro"}, {question_index: 1, awnser: "pro"}];
 
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
@@ -7,35 +7,53 @@ const startBtn = document.getElementById("startBtn");
 const title = document.getElementById("Title");
 const statement = document.getElementById("Statement");
 const pagechange = document.getElementById("page-change");
+var awnserBtns = document.getElementsByClassName("awnser-btn");
 
 startBtn.onclick = function() {
 	const container = document.getElementById("container");
 	pagechange.style.display = "none";
-	container.classList.remove('hidden');
+    container.classList.remove('hidden');
+    nextQuestion();
 }
 
-setAwnserForQuestion();
-prevButton.onclick = prevQuestion()
-nextButton.onclick = nextQuestion()
+nextButton.onclick =  e => { nextQuestion()};
+prevButton.onclick =  e => { prevQuestion()};
+
+for(var i = 0; i < awnserBtns.length; i++){
+    awnserBtns[i].onclick = e => { 
+        setAwnserForQuestion(e.target.dataset.awnser);
+        nextQuestion()
+    }; 
+}
+
 
 function nextQuestion(){
-    questionIndex++;
-    title.innerHTML = subjects[questionIndex].title;
-    statement.innerHTML = subjects[questionIndex].statement;
+    if((currentQuestionIndex + 1) < subjects.length){
+        currentQuestionIndex++;
+        title.innerHTML = subjects[currentQuestionIndex].title;
+        statement.innerHTML = subjects[currentQuestionIndex].statement;
+    }
 }
 
 function prevQuestion(){
-    questionIndex--;
-    title.innerHTML = subjects[questionIndex];
-    statement.innerHTML = subjects[questionIndex];
+    if((currentQuestionIndex - 1) > 0){
+        currentQuestionIndex--;
+        title.innerHTML = subjects[currentQuestionIndex].title;
+        statement.innerHTML = subjects[currentQuestionIndex].statement;
+    }
 }
 
-function setAwnserForQuestion(){
-    if(answerOnQuestion.includes(questionIndex == 1)){
-        // answerOnQuestion.push({})
-        console.log("jaaaa");
+function setAwnserForQuestion(awnser){
+    var existingAwnser = answerOnQuestion.filter(e => e.question_index == currentQuestionIndex);
+    if(existingAwnser.length > 0){
+        console.log(answerOnQuestion.indexOf(existingAwnser[0]));
+        answerOnQuestion[answerOnQuestion.indexOf(existingAwnser[0])].awnser = awnser;
+        console.log(answerOnQuestion);
     }
-    
+    else{
+        answerOnQuestion.push({question_index: currentQuestionIndex, awnser: awnser})
+        console.log(answerOnQuestion);
+    }
 }
 
 
