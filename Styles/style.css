@@ -6,7 +6,7 @@ body {
 	display: none;
 }
 
-.main {
+#main {
 	position: relative;
     width: 100%;
     max-width: 744px;
@@ -29,7 +29,7 @@ body {
   	margin-left: 30px;
 }
 
-#tekst {
+#important-text {
 	margin-left: 30px;
 	padding-bottom: 20px;
 	font-size: 20px;
@@ -60,4 +60,74 @@ body {
 
 #nextButton {
     float: right;
+}
+
+#resultButton {
+	float: right;
+	display: none;
+}
+
+#result-btn {
+	border-style: solid;
+	border-radius: 16px;
+	background: #233fff;
+ 	padding: 10px;
+  	width: 150px;
+  	height: 60px;
+  	font-weight: bold;
+  	color: white;
+  	margin: auto;
+	margin-top: 20px;
+
+}
+
+.options {
+	display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+	background-color: #fff;
+	border-radius: 8px;
+	margin: auto;
+}
+
+#btnkeuzes {
+	background-color: #f1f1f1;
+	border-radius: 24px;
+	padding: 10px;
+}
+
+#start-text {
+	max-width: 400px;
+	font-weight: 300;
+    font-size: 36px;
+}
+
+#important-div {
+	position: relative;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 12px;
+    padding: 4px 50px 64px 64px;
+    background: #fff;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.checkboxes {
+	width: 32.99%;
+	background-color: #fff;
+	padding: 5px;
+	display: inline-block;
+	border-radius: 12px;
+	margin-bottom: 5px;
+	margin-left: 2px;
+}
+
+#subject-btn-label {
+	margin-left: 5px;
+}
+
+label {
+	display: inline!important;
 }

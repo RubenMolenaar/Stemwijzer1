@@ -22,7 +22,13 @@ var parties = [
        secular: true,
        size: 14,
        long: "Socialistische Partij"
-     }
+     },
+     {
+      name: "SP",
+      secular: true,
+      size: 14,
+      long: "Socialistische Partij"
+    }
    ];
    
    // Testen op correcte match, voer in:

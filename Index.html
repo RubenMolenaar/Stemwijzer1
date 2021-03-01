@@ -7,22 +7,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 </head>
 <body>
-    <div class="main">
+    <div id="important-div" class="hidden">
         <div id="page-change">
             <img alt="StemWijzer Logo" src="https://assets.stemwijzer.nl/fb-logo-2021.jpg" class="start__logo">
-            <h1 id="tekst">Test je politieke voorkeur aan de hand van 30 stellingen</h1>
+            <div class="options">
+                <h1 id="important-text">zijn er onderwerpen die je extra belangrijk vindt?</h1>
+                <div id="start">
+                    <button id="result-btn">Volgende</button>
+                </div>
+            </div>
+            <div id="btnkeuzes">
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="start-div">
+            <img alt="StemWijzer Logo" src="https://assets.stemwijzer.nl/fb-logo-2021.jpg" class="start__logo">
+            <h1 id="start-text">Test je politieke voorkeur aan de hand van 30 stellingen</h1>
             <div id="start">
                 <button id="startBtn">START</button>
             </div>
         </div>
 
-
-        <div id="container" class="hidden">
+        <div id="question-div" class="hidden">
+            <div class="progress">
+                <div id="question-progress-bar" class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
             <h1 id="Title">i</h1>
             <h2 id="Statement">h</h2>
             <button class="btn btn-success awnser-btn" data-awnser="pro"><i class="fas fa-thumbs-up icons"></i>Eens</button>
             <button class="btn btn-default awnser-btn" data-awnser="none"><i class="fas fa-arrows-alt-h icons"></i>Geen van beide</button>
             <button class="btn btn-danger awnser-btn" data-awnser="contra"><i class="fas fa-thumbs-down icons"></i>Oneens</button>
+            <button id="resultButton" class="btn btn-primary"><i class="fas fa-poll icons"></i>naar resultaten</button>
             <button id="nextButton" class="btn"><i class="fas fa-forward"></i></button>
             <button id="prevButton" class="btn"><i class="fas fa-backward"></i></button>
         </div>
