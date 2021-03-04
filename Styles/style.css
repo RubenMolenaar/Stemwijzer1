@@ -118,16 +118,22 @@ body {
 	width: 32.99%;
 	background-color: #fff;
 	padding: 5px;
-	display: inline-block;
+	display: inline-block !important;
 	border-radius: 12px;
 	margin-bottom: 5px;
-	margin-left: 2px;
+	
 }
-
+.statement-btn{
+	margin-right: 2px !important;
+}
 #subject-btn-label {
-	margin-left: 5px;
+	margin-left: 2px;
 }
 
 label {
 	display: inline!important;
+}
+
+#resultbars {
+    margin-top: 25px;
 }

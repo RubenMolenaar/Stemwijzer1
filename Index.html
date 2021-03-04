@@ -38,9 +38,15 @@
             <button class="btn btn-success awnser-btn" data-awnser="pro"><i class="fas fa-thumbs-up icons"></i>Eens</button>
             <button class="btn btn-default awnser-btn" data-awnser="none"><i class="fas fa-arrows-alt-h icons"></i>Geen van beide</button>
             <button class="btn btn-danger awnser-btn" data-awnser="contra"><i class="fas fa-thumbs-down icons"></i>Oneens</button>
-            <button id="resultButton" class="btn btn-primary"><i class="fas fa-poll icons"></i>naar resultaten</button>
+            <button id="resultButton" data-page="questions" class="btn btn-primary"><i class="fas fa-poll icons"></i>naar resultaten</button>
             <button id="nextButton" class="btn"><i class="fas fa-forward"></i></button>
             <button id="prevButton" class="btn"><i class="fas fa-backward"></i></button>
+        </div>
+        <div id="result-div" class="hidden">
+            <img alt="StemWijzer Logo" src="https://assets.stemwijzer.nl/fb-logo-2021.jpg" class="start__logo">
+            <h2>resultaten:</h2>
+            <div id="resultbars">
+            </div>
         </div>
     </div>
 </body>
