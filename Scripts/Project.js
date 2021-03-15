@@ -56,7 +56,7 @@ for(var i = 0; i < awnserBtns.length; i++){
 }
 
 function ToResults(){
-
+    console.log(answerOnQuestion);
     important_div.classList.add('hidden');
     result_div.classList.remove('hidden');
     main.classList.remove('hidden');
@@ -82,7 +82,7 @@ function ToResults(){
 
     if(party_results.length > 0){
         party_results.sort(function(a, b){return b.procentage - a.procentage}).forEach(function(element) {
-            resultbars.insertAdjacentHTML('beforeend', `${ parties[element.party].name} <div class="progress"> <div class="progress-bar" data-party="" role="progressbar" style="width: ${element.procentage}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${element.procentage}</div></div>`)     
+            resultbars.insertAdjacentHTML('beforeend', `${ parties[element.party].name} <div class="progress"> <div class="progress-bar" data-party="" role="progressbar" style="width: ${element.procentage}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">${element.procentage} %</div></div>`)     
         })
     }
 
